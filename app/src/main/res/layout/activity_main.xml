@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10dp">
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter user name"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+       />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUserMail"
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textUserPhone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="32dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_shape_edt_background"
+            android:gravity="center"
+            android:hint="Enter phone"
+            android:inputType="phone"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="4dp"
+            />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUserAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter fulladdress"
+        android:inputType="textPostalAddress"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUniversityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter university name"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+         />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textGruationYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_shape_edt_background"
+            android:gravity="center"
+            android:hint="Enter Graduation Year"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="4dp"
+            />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUserCgpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter CGPA"
+        android:inputType="numberDecimal"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+         />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textExperience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter Experience"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+         />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textCurrentWorkPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_shape_edt_background"
+            android:gravity="center"
+            android:hint="Enter current Work place"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="4dp"
+            />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textApplyingMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter Applying"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+       />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUserSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter expected Sallay"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+         />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textFieldReference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:hint="Enter reference "
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+         />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textUserGithubUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_weight="4"
+        android:background="@drawable/rounded_shape_edt_background"
+        android:gravity="center"
+        android:hint="Enter Github Url"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/txt_pdf_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pdf file name"/>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_choose_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_custom_button_backgroudn"
+                android:text="Select file"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSubmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rectangle_custom_button_backgroudn"
+            android:text="submit"></Button>
+    </LinearLayout>
+
+</ScrollView>
