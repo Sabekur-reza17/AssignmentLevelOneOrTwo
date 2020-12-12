@@ -163,24 +163,37 @@
             android:paddingEnd="16dp"
             android:paddingBottom="4dp"
             />
+        <RadioGroup
+            android:id="@+id/radioGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_shape_edt_background"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            >
+            <RadioButton
+                android:id="@+id/radioMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:text="@string/mobile"
+                />
+            <RadioButton
+                android:id="@+id/radioBackend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textApplyingMethod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        android:layout_weight="4"
-        android:background="@drawable/rounded_shape_edt_background"
-        android:gravity="center"
-        android:hint="Enter Applying"
-        android:inputType="text"
-        android:paddingStart="16dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="4dp"
-       />
-
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:text="@string/backend"
+                />
+        </RadioGroup>
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textUserSalary"
         android:layout_width="match_parent"

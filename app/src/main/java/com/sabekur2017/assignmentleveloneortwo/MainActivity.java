@@ -12,10 +12,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -39,21 +44,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    TextInputEditText edtUsername,edtUserEmail,edtUserPhone,edtUserAddress,edtUserUniversity,edtGraduationYear,edtUserCGpa,edtUserExperience,edtCurrentWorkPlace,edtUserApplying,edtexpectedSalary,edtUsreReference;
-    TextInputEditText edtUserrGitUrl;
+    TextInputEditText edtUsername,edtUserEmail,edtUserPhone,edtUserAddress,edtUserUniversity,edtGraduationYear,edtUserCGpa,edtUserExperience,edtCurrentWorkPlace,edtUserrGitUrl,edtexpectedSalary,edtUsreReference;
     Button btnSubmit,btnChooseFile;
-
     private Uri filePath;
     private int PICK_PDF_REQUEST = 1;
     private static final int STORAGE_PERMISSION_CODE = 123;
     TextView pdfName;
     APIClient apiClient;
+    private RadioGroup radioApplymethodGroup;
+    private RadioButton radioApplyMethodButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestStoragePermission();
         apiClient=new APIClient();
+        radioApplymethodGroup =  findViewById(R.id.radioGrp);
+
         edtUsername=findViewById(R.id.txtUserName);
         edtUserEmail=findViewById(R.id.textUserMail);
         edtUserPhone=findViewById(R.id.textUserPhone);
@@ -63,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         edtUserCGpa=findViewById(R.id.textUserCgpa);
         edtUserExperience=findViewById(R.id.textExperience);
         edtCurrentWorkPlace=findViewById(R.id.textCurrentWorkPlace);
-        edtUserApplying=findViewById(R.id.textApplyingMethod);
+        //edtApplyingMethod=findViewById(R.id.textApplyingMethod);
         edtexpectedSalary=findViewById(R.id.textUserSalary);
         edtUsreReference=findViewById(R.id.textFieldReference);
         edtUserrGitUrl=findViewById(R.id.textUserGithubUrl);
@@ -71,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         pdfName=findViewById(R.id.txt_pdf_name);
         btnSubmit=findViewById(R.id.btnSubmt);
         btnChooseFile=findViewById(R.id.btn_choose_pdf);
-        apiClient=new APIClient();
+
+
         btnChooseFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void submitRequirement(){
+        int selectedId = radioApplymethodGroup.getCheckedRadioButtonId();
+        radioApplyMethodButton = findViewById(selectedId);
         String  device_UDID;
         try {
             device_UDID = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
@@ -116,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         userDataUploadModel.setCgpa(Double.valueOf(edtUserCGpa.getText().toString()));
         userDataUploadModel.setExperienceInMonths(Integer.valueOf(edtUserExperience.getText().toString()));
         userDataUploadModel.setCurrentWorkPlaceName(edtCurrentWorkPlace.getText().toString());
-        userDataUploadModel.setApplyingIn(edtUserApplying.getText().toString());
+        userDataUploadModel.setApplyingIn(radioApplyMethodButton.getText().toString());
         userDataUploadModel.setExpectedSalary(Integer.valueOf(edtexpectedSalary.getText().toString()));
         userDataUploadModel.setFieldBuzzReference(edtUsreReference.getText().toString());
         userDataUploadModel.setGithubProjectUrl(edtUserrGitUrl.getText().toString());
