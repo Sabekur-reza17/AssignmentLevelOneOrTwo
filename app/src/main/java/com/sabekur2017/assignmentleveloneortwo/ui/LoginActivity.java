@@ -9,11 +9,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.sabekur2017.assignmentleveloneortwo.MainActivity;
 import com.sabekur2017.assignmentleveloneortwo.data.APIClient;
 import com.sabekur2017.assignmentleveloneortwo.R;
+import com.sabekur2017.assignmentleveloneortwo.data.ApiInterface;
 import com.sabekur2017.assignmentleveloneortwo.data.models.UserRequest;
 import com.sabekur2017.assignmentleveloneortwo.data.models.UserResponse;
 import com.sabekur2017.assignmentleveloneortwo.util.PreferenceUtility;
@@ -28,8 +30,8 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    APIClient apiClient;
-
+   // APIClient apiClient;
+    private ApiInterface apiInterface;
     TextInputEditText edtUserName,edtPassword;
     Button btnLogin;
     ProgressBar progressBar;
@@ -41,7 +43,8 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword=findViewById(R.id.textInputEditPassword);
         progressBar=findViewById(R.id.login_progress);
         btnLogin=findViewById(R.id.btn_login);
-        apiClient=new APIClient();
+        apiInterface=APIClient.createService(ApiInterface.class);
+     //   apiClient=new APIClient();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +76,8 @@ public class LoginActivity extends AppCompatActivity {
         String password=edtPassword.getText().toString();
 
         UserRequest userRequest=new UserRequest(username,password);
-        Call<UserResponse> call = apiClient.getApiService().logInWithPhnNum(userRequest);
+      //  Call<UserResponse> call = apiClient.getApiService().logInWithPhnNum(userRequest);
+        Call<UserResponse> call = apiInterface.logInWithPhnNum(userRequest);
         showLoading();
         call.enqueue(new Callback<UserResponse>() {
             @Override
@@ -89,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                     hideLoading();
                 }else {
                     Log.d("responseerror",response.message());
+                    Toast.makeText(LoginActivity.this, "try again,something went wrong", Toast.LENGTH_SHORT).show();
                     hideLoading();
                 }
 
@@ -96,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, "try again,something went wrong", Toast.LENGTH_SHORT).show();
 
             }
         });

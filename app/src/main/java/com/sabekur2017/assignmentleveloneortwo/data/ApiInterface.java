@@ -8,6 +8,7 @@ import com.sabekur2017.assignmentleveloneortwo.data.models.UserResponse;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -15,15 +16,27 @@ import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 public interface ApiInterface {
-    @POST("login/")
+    /*@POST("login/")
     Call<UserResponse> logInWithPhnNum(@Body UserRequest request);
-    @POST("v0/recruiting-entities/")
+    @POST("v1/recruiting-entities/")
     Call<JsonObject> userRequirementUpload(@Body UserDataUploadModel userDataUploadModel);
 
     @Multipart
     @PUT("file-object/{id}/")
     Call<JsonObject> cvUload(
             @Path("id") int Id,
+            @Part MultipartBody.Part pdfFile
+    );*/
+    @POST("login/")
+    Call<UserResponse> logInWithPhnNum(@Body UserRequest request);
+    @POST("v1/recruiting-entities/")
+    Call<JsonObject> userRequirementUpload(@Header("Authorization") String authorization, @Body UserDataUploadModel userDataUploadModel);
+
+    @Multipart
+    @PUT("file-object/{id}/")
+    Call<JsonObject> cvUload(
+            @Header("Authorization") String authorization,
+            @Path("id") String Id,
             @Part MultipartBody.Part pdfFile
     );
 }
