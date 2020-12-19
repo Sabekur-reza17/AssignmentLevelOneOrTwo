@@ -16,17 +16,7 @@ import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 public interface ApiInterface {
-    /*@POST("login/")
-    Call<UserResponse> logInWithPhnNum(@Body UserRequest request);
-    @POST("v1/recruiting-entities/")
-    Call<JsonObject> userRequirementUpload(@Body UserDataUploadModel userDataUploadModel);
 
-    @Multipart
-    @PUT("file-object/{id}/")
-    Call<JsonObject> cvUload(
-            @Path("id") int Id,
-            @Part MultipartBody.Part pdfFile
-    );*/
     @POST("login/")
     Call<UserResponse> logInWithPhnNum(@Body UserRequest request);
     @POST("v1/recruiting-entities/")

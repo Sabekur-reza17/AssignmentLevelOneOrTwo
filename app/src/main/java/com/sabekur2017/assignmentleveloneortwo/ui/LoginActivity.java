@@ -18,6 +18,7 @@ import com.sabekur2017.assignmentleveloneortwo.R;
 import com.sabekur2017.assignmentleveloneortwo.data.ApiInterface;
 import com.sabekur2017.assignmentleveloneortwo.data.models.UserRequest;
 import com.sabekur2017.assignmentleveloneortwo.data.models.UserResponse;
+import com.sabekur2017.assignmentleveloneortwo.util.Networkcheck;
 import com.sabekur2017.assignmentleveloneortwo.util.PreferenceUtility;
 
 import java.util.regex.Matcher;
@@ -30,7 +31,7 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-   // APIClient apiClient;
+
     private ApiInterface apiInterface;
     TextInputEditText edtUserName,edtPassword;
     Button btnLogin;
@@ -44,12 +45,17 @@ public class LoginActivity extends AppCompatActivity {
         progressBar=findViewById(R.id.login_progress);
         btnLogin=findViewById(R.id.btn_login);
         apiInterface=APIClient.createService(ApiInterface.class);
-     //   apiClient=new APIClient();
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+                if(Networkcheck.isConnectedToInternet(getApplicationContext())){
+                    login();
+                }else {
+                    Toast.makeText(getApplicationContext(), "check the internet connection", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

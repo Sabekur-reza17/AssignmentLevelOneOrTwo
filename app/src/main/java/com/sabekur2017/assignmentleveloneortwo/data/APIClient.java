@@ -45,31 +45,5 @@ public class APIClient {
         retrofit = builder.build();
         return retrofit.create(serviceClass);
     }
-    /*public APIClient() {
-    }
 
-    public Retrofit getRetrofit() {
-        return new Retrofit.Builder()
-                .baseUrl(BuildConfig.FIELD_BUZZ_BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
-
-    public ApiInterface getApiService() {
-        return getRetrofit()
-                .create(ApiInterface.class);
-    }
-
-    private Retrofit getRetrofit(OkHttpClient client) {
-        return new Retrofit.Builder()
-                .baseUrl(BuildConfig.FIELD_BUZZ_BASE_URL)
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
-
-    public ApiInterface getApiService(OkHttpClient client) {
-        return getRetrofit(client)
-                .create(ApiInterface.class);
-    }*/
 }
