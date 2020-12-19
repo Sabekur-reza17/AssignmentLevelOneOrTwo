@@ -12,9 +12,13 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:padding="10dp">
-
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_user_data"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txtUserName"
         android:layout_width="match_parent"
@@ -24,7 +28,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter user name"
+        android:hint="@string/enter_user_name"
         android:inputType="text"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -41,7 +45,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter email"
+        android:hint="@string/enter_email"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -57,7 +61,7 @@
             android:layout_weight="4"
             android:background="@drawable/rounded_shape_edt_background"
             android:gravity="center"
-            android:hint="Enter phone"
+            android:hint="@string/enter_phone"
             android:inputType="phone"
             android:paddingStart="16dp"
             android:paddingTop="4dp"
@@ -74,7 +78,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter fulladdress"
+        android:hint="@string/enter_full_address"
         android:inputType="textPostalAddress"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -91,7 +95,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter university name"
+        android:hint="@string/enter_university_name"
         android:inputType="text"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -107,7 +111,7 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded_shape_edt_background"
             android:gravity="center"
-            android:hint="Enter Graduation Year"
+            android:hint="@string/enter_graduation_year"
             android:inputType="number"
             android:paddingStart="16dp"
             android:paddingTop="4dp"
@@ -123,7 +127,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter CGPA"
+        android:hint="@string/enter_cgpa"
         android:inputType="numberDecimal"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -140,7 +144,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter Experience"
+        android:hint="@string/enter_experience"
         android:inputType="number"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -156,7 +160,7 @@
             android:layout_weight="4"
             android:background="@drawable/rounded_shape_edt_background"
             android:gravity="center"
-            android:hint="Enter current Work place"
+            android:hint="@string/enter_current_work_place"
             android:inputType="text"
             android:paddingStart="16dp"
             android:paddingTop="4dp"
@@ -203,7 +207,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter expected Sallay"
+        android:hint="@string/enter_expected_salary"
         android:inputType="number"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -220,7 +224,7 @@
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
         android:layout_marginTop="32dp"
-        android:hint="Enter reference "
+        android:hint="@string/enter_reference"
         android:inputType="text"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -237,7 +241,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter Github Url"
+        android:hint="@string/enter_github_url"
         android:inputType="text"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -253,14 +257,14 @@
                 android:id="@+id/txt_pdf_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Pdf file name"/>
+                android:hint="@string/pdf_file_name"/>
             <Button
                 android:layout_weight="1"
                 android:id="@+id/btn_choose_pdf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_custom_button_backgroudn"
-                android:text="Select file"/>
+                android:text="@string/select_file"/>
         </LinearLayout>
         <Button
             android:id="@+id/btnSubmt"
@@ -269,7 +273,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/rectangle_custom_button_backgroudn"
-            android:text="submit"></Button>
+            android:text="@string/submit"/>
     </LinearLayout>
 
 </ScrollView>

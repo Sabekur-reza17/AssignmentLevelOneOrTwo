@@ -3,4 +3,24 @@
     <string name="internal_storage">Internal storage</string>
     <string name="mobile">Mobile</string>
     <string name="backend">Backend</string>
+    <string name="enter_login_credentials">Enter login credentials</string>
+    <string name="enter_user_name">Enter user name</string>
+    <string name="enter_passwod">Enter passwod</string>
+    <string name="login">Login</string>
+    <string name="enter_user_data">Enter User Data</string>
+
+    <string name="enter_email">Enter email</string>
+    <string name="enter_phone">Enter phone</string>
+    <string name="enter_full_address">Enter full address</string>
+    <string name="enter_university_name">Enter university name</string>
+    <string name="enter_graduation_year">Enter Graduation Year</string>
+    <string name="enter_cgpa">Enter CGPA</string>
+    <string name="enter_experience">Enter Experience</string>
+    <string name="enter_current_work_place">Enter current Work place</string>
+    <string name="enter_expected_salary">Enter expected Salary</string>
+    <string name="enter_reference">Enter reference</string>
+    <string name="enter_github_url">Enter Github Url</string>
+    <string name="pdf_file_name">Pdf file name</string>
+    <string name="select_file">Select file</string>
+    <string name="submit">submit</string>
 </resources>

@@ -23,6 +23,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.417" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEditUserId"
+        android:text="@string/enter_login_credentials"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditUserId"
         android:layout_width="match_parent"
@@ -31,7 +43,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter user name"
+        android:hint="@string/enter_user_name"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -52,7 +64,7 @@
         android:layout_weight="4"
         android:background="@drawable/rounded_shape_edt_background"
         android:gravity="center"
-        android:hint="Enter passwod"
+        android:hint="@string/enter_passwod"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingTop="4dp"
@@ -72,7 +84,7 @@
         android:background="@drawable/rectangle_custom_button_backgroudn"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text="Login"
+        android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
